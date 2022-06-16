@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Nav from '$lib/components/nav.svelte';
+	import Navbar from '$lib/components/Navbar.svelte';
 </script>
 
 <div class="container">
-	<Nav />
+	<Navbar brand="Magenta" />
 	<slot />
 </div>

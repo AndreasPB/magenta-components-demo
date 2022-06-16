@@ -1,1 +1,1 @@
-export { default as Nav } from "$lib/components/nav.svelte"
+export { default as Navbar } from "$lib/components/Navbar.svelte"
