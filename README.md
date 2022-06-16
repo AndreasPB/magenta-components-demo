@@ -9,5 +9,5 @@ Demo at https://magenta-components-demo.vercel.app/
 	import { Navbar } from 'magenta-components-demo'
 </script>
 
-<Navbar brand="Magenta" />
+<Navbar />
 ```
