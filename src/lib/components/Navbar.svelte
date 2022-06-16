@@ -2,6 +2,13 @@
 	import DarkLogo from '$lib/static/magenta-logo-byline-dark.svg';
 	import LightLogo from '$lib/static/magenta-logo-byline.svg';
 
+	interface Link {
+		path: string;
+		name: string;
+	}
+
+	export let links: Link[] = [];
+
 	const isDarkMode = (): string => {
 		if (typeof window !== 'undefined') {
 			return window.matchMedia('(prefers-color-scheme: dark)').matches ? DarkLogo : LightLogo;
@@ -20,11 +27,13 @@
 
 <nav>
 	<ul>
-		<img src={dynamicLogo} alt="Dark logo" width="150em" />
+		<li>
+			<a href="/"><img src={dynamicLogo} alt="Logo" width="150em" /></a>
+		</li>
 	</ul>
 	<ul>
-		<li><a href="/">Link</a></li>
-		<li><a href="/">Link</a></li>
-		<li><a href="/" role="button">Home</a></li>
+		{#each links as link}
+			<li><a href={link.path}>{link.name}</a></li>
+		{/each}
 	</ul>
 </nav>

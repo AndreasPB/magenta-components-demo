@@ -3,6 +3,11 @@
 </script>
 
 <div class="container">
-	<Navbar />
+	<Navbar
+		links={[
+			{ name: 'About', path: '/about' },
+			{ name: 'Contact', path: '/contact' }
+		]}
+	/>
 	<slot />
 </div>
